@@ -1,0 +1,54 @@
+version: '3.7'
+services:
+  redis:
+    container_name: sdb-redis
+    image: redis:latest
+    ports:
+      - 6379:6379
+    expose:
+      - 6379
+#    volumes:
+#      - :/volumes/data_redis/
+    networks:
+      - backend
+
+  db:
+    container_name: sdb-mysql
+    image: mysql
+    restart: always
+    command:  --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_DATABASE: 'safedepositbox'
+      MYSQL_USER: 'safedepositbox'
+      MYSQL_PASSWORD: 'MereHe@d1DBTest1'
+      MYSQL_ROOT_PASSWORD: 'MereHe@d1DBTest1'
+      MYSQL_ROOT_USER: 'root'
+      MYSQL_ROOT_HOST: '%'
+    ports:
+      - 3306:3306
+    expose:
+      - 3306
+    networks:
+      - backend
+    volumes:
+      - /var/lib/mysql
+
+  server:
+    build: ./
+    container_name: sdb-server
+    command: npm run dev
+    restart: always
+    ports:
+      - 8080:80
+    expose:
+      - 3306
+    networks:
+      - backend
+    depends_on:
+      - db
+
+
+networks:
+  backend:
+    name: sdb_network
+    driver: bridge

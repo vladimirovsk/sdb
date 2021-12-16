@@ -1,0 +1,63 @@
+{
+  "contracts": {},
+  "solidityLibs": {},
+  "proxies": {
+    "SDB/SDBswapFactory": [
+      {
+        "address": "0x3274608599833BE94e246EeD0b29C892bf25Bc5a",
+        "kind": "NonProxy",
+        "bytecodeHash": "e528227e8277bc0ee7f2a7e60edf77b0a864e185d796b65f23db52699380b563"
+      }
+    ],
+    "SDB/SDBswapRouter": [
+      {
+        "address": "0x8302c22142d8d12e3a3a4fe5a0f86a6610a68254",
+        "kind": "NonProxy",
+        "bytecodeHash": "58eb87e533745892facbfc8bbbab2edd59d81682729e8d233c7c6da1c322e359"
+      }
+    ],
+    "SDB/SDBtoken": [
+      {
+        "address": "0xc3142810057713BB7651240C86671c7966Be75fd",
+        "kind": "NonProxy",
+        "bytecodeHash": "3ac08564cc661cf60c764510f7114e11098891b554681db4e370a6fab3444c20"
+      }
+    ],
+    "SDB/AMDtoken": [
+      {
+        "address": "0x650ec7bB36C924EdFB0C18C8d8C1A1FCa50e83C2",
+        "kind": "NonProxy",
+        "bytecodeHash": "51f3eb688d380d7d20e2a5a17452efb0f3169e1c8064e7ac68fbba492f770220"
+      }
+    ],
+    "SDB/BMWtoken": [
+      {
+        "address": "0x3Cfa1eF60B81C9196E22337D494ED0aC9eb5Cba5",
+        "kind": "NonProxy",
+        "bytecodeHash": "b3f9b0f351c57437b89b6d6ad21b0185f075cbd32b273a2dfeecc5416f0e63f5"
+      }
+    ],
+    "SDB/LGDtoken": [
+      {
+        "address": "0x0eab1CeA6a33b916DdFD347636bF5dc9e69693be",
+        "kind": "NonProxy",
+        "bytecodeHash": "a2dd1155dbc4811b9484e612b57bd788253f3be8651f81868b7a2d08a2e269ff"
+      }
+    ],
+    "SDB/StakingFarm": [
+      {
+        "address": "0x46de68E0a23602862c0d3D9FF0c228554CC174Ac",
+        "kind": "NonProxy",
+        "bytecodeHash": "cd2b4dc376fe24a9031a1b990456d85b1e1881ae73c4630f594acd8956cf867f"
+      }
+    ],
+    "SDB/Vendor": [
+      {
+        "address": "0xc3d9568db85f8238d93CD3006Cd09D5579b3e890",
+        "kind": "NonProxy",
+        "bytecodeHash": "d2a9b5faa0bdfc793adce68262bdbe8cedb4b87efbf41c06f78883e5b4db4714"
+      }
+    ]
+  },
+  "manifestVersion": "2.2"
+}

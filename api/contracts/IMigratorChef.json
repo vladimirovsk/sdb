@@ -1,0 +1,363 @@
+{
+  "contractName": "IMigratorChef",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "contract IBEP20",
+          "name": "token",
+          "type": "address"
+        }
+      ],
+      "name": "migrate",
+      "outputs": [
+        {
+          "internalType": "contract IBEP20",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.4+commit.c7e474f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract IBEP20\",\"name\":\"token\",\"type\":\"address\"}],\"name\":\"migrate\",\"outputs\":[{\"internalType\":\"contract IBEP20\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/interface/IMigratorChef.sol\":\"IMigratorChef\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":1000},\"remappings\":[]},\"sources\":{\"project:/contracts/interface/IBEP20.sol\":{\"keccak256\":\"0x78f57d706bda7adaf6169b8b966090eba6249db3ac28033c0dd9a4edfc2505b2\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://ceb43be0a01e2f1c2fedc22f18d885752e6ecbf9e57450627e1003a24475b764\",\"dweb:/ipfs/QmXUvgUaR3jStAmqjw9DpQQ2vUwuBaRRGdxKwtqN5EnYte\"]},\"project:/contracts/interface/IMigratorChef.sol\":{\"keccak256\":\"0xd1574e439bf08e108ac13eb069cd90603be4e0c69f3b36c0eb66401545c2f191\",\"license\":\"UNLICENSED\",\"urls\":[\"bzz-raw://3d30367396b5b317626080317cef70c7917671c1190073700399614857fbfe63\",\"dweb:/ipfs/QmPampRZzWenVA2zshFep4f2yGV3g4JP2kdpNpNTbiRHfM\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "//SPDX-License-Identifier: UNLICENSED\r\npragma solidity ^0.8.4;\r\nimport \"./IBEP20.sol\";\r\n\r\n// MasterChef is the master of Cake. He can make Cake and he is a fair guy.\r\n//\r\n// Note that it's ownable and the owner wields tremendous power. The ownership\r\n// will be transferred to a governance smart contract once CAKE is sufficiently\r\n// distributed and the community can show to govern itself.\r\n//\r\n// Have fun reading it. Hopefully it's bug-free. God bless.\r\n\r\ninterface IMigratorChef {\r\n    // Perform LP token migration from legacy PancakeSwap to CakeSwap.\r\n    // Take the current LP token address and return the new LP token address.\r\n    // Migrator should have full access to the caller's LP token.\r\n    // Return the new LP token address.\r\n    //\r\n    // XXX Migrator must have allowance access to PancakeSwap LP tokens.\r\n    // CakeSwap must mint EXACTLY the same amount of CakeSwap LP tokens or\r\n    // else something bad will happen. Traditional PancakeSwap does not\r\n    // do that so be careful!\r\n    function migrate(IBEP20 token) external returns (IBEP20);\r\n}",
+  "sourcePath": "C:\\Users\\kolam\\Desktop\\safeSDB\\safedepositbox-smartcontracts\\contracts\\interface\\IMigratorChef.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/interface/IMigratorChef.sol",
+    "exportedSymbols": {
+      "IBEP20": [
+        16560
+      ],
+      "IMigratorChef": [
+        16657
+      ]
+    },
+    "id": 16658,
+    "license": "UNLICENSED",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 16646,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".4"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "39:23:42"
+      },
+      {
+        "absolutePath": "project:/contracts/interface/IBEP20.sol",
+        "file": "./IBEP20.sol",
+        "id": 16647,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 16658,
+        "sourceUnit": 16561,
+        "src": "64:22:42",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 16657,
+        "linearizedBaseContracts": [
+          16657
+        ],
+        "name": "IMigratorChef",
+        "nameLocation": "470:13:42",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "ce5494bb",
+            "id": 16656,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "migrate",
+            "nameLocation": "1021:7:42",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 16651,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 16650,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nameLocation": "1036:5:42",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16656,
+                  "src": "1029:12:42",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IBEP20_$16560",
+                    "typeString": "contract IBEP20"
+                  },
+                  "typeName": {
+                    "id": 16649,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 16648,
+                      "name": "IBEP20",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 16560,
+                      "src": "1029:6:42"
+                    },
+                    "referencedDeclaration": 16560,
+                    "src": "1029:6:42",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IBEP20_$16560",
+                      "typeString": "contract IBEP20"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1028:14:42"
+            },
+            "returnParameters": {
+              "id": 16655,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 16654,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16656,
+                  "src": "1061:6:42",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IBEP20_$16560",
+                    "typeString": "contract IBEP20"
+                  },
+                  "typeName": {
+                    "id": 16653,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 16652,
+                      "name": "IBEP20",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 16560,
+                      "src": "1061:6:42"
+                    },
+                    "referencedDeclaration": 16560,
+                    "src": "1061:6:42",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IBEP20_$16560",
+                      "typeString": "contract IBEP20"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1060:8:42"
+            },
+            "scope": 16657,
+            "src": "1012:57:42",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 16658,
+        "src": "460:612:42",
+        "usedErrors": []
+      }
+    ],
+    "src": "39:1033:42"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/interface/IMigratorChef.sol",
+    "exportedSymbols": {
+      "IBEP20": [
+        16560
+      ],
+      "IMigratorChef": [
+        16657
+      ]
+    },
+    "id": 16658,
+    "license": "UNLICENSED",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 16646,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".4"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "39:23:42"
+      },
+      {
+        "absolutePath": "project:/contracts/interface/IBEP20.sol",
+        "file": "./IBEP20.sol",
+        "id": 16647,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 16658,
+        "sourceUnit": 16561,
+        "src": "64:22:42",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 16657,
+        "linearizedBaseContracts": [
+          16657
+        ],
+        "name": "IMigratorChef",
+        "nameLocation": "470:13:42",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "functionSelector": "ce5494bb",
+            "id": 16656,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "migrate",
+            "nameLocation": "1021:7:42",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 16651,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 16650,
+                  "mutability": "mutable",
+                  "name": "token",
+                  "nameLocation": "1036:5:42",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16656,
+                  "src": "1029:12:42",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IBEP20_$16560",
+                    "typeString": "contract IBEP20"
+                  },
+                  "typeName": {
+                    "id": 16649,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 16648,
+                      "name": "IBEP20",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 16560,
+                      "src": "1029:6:42"
+                    },
+                    "referencedDeclaration": 16560,
+                    "src": "1029:6:42",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IBEP20_$16560",
+                      "typeString": "contract IBEP20"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1028:14:42"
+            },
+            "returnParameters": {
+              "id": 16655,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 16654,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 16656,
+                  "src": "1061:6:42",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IBEP20_$16560",
+                    "typeString": "contract IBEP20"
+                  },
+                  "typeName": {
+                    "id": 16653,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 16652,
+                      "name": "IBEP20",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 16560,
+                      "src": "1061:6:42"
+                    },
+                    "referencedDeclaration": 16560,
+                    "src": "1061:6:42",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IBEP20_$16560",
+                      "typeString": "contract IBEP20"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1060:8:42"
+            },
+            "scope": 16657,
+            "src": "1012:57:42",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 16658,
+        "src": "460:612:42",
+        "usedErrors": []
+      }
+    ],
+    "src": "39:1033:42"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.4+commit.c7e474f2.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.1",
+  "updatedAt": "2021-07-21T08:49:56.542Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}

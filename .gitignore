@@ -1,0 +1,12 @@
+node_modules
+package-lock.json
+config.js
+nbproject
+.DS_Store
+*.iml
+.idea
+.env
+workspace.xml
+pre-backup
+volumes
+docker

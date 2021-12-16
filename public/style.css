@@ -1,0 +1,17 @@
+
+  .title {color:black; margin-top: 0.8em;}
+  .pointEnter {color:blue; font-size: 1.2em;}
+  .method { color:black;  font-weight: bold; margin-top: 0.2em; font-size: 0.2em; }
+  .code1 {color:black;  font-family: 'Source Code Pro', monospace; margin-left: 2em; font-size: 0.8em;}
+
+  .prettyprint.prettyprinted {
+    border-width: 0px;
+  }
+  .prettyprint {
+    border-width: 0px;
+  }
+
+  .typeRequest {
+    color: blue;
+    font-size: 1em;
+  }

@@ -1,0 +1,59 @@
+version: '3.7'
+services:
+  backup:
+    container_name: sdb-backup
+    image: databack/mysql-backup
+    restart: always
+    volumes:
+      - /var/lib/mysql:/db
+      - /Users/s.vladimirov/Project/SafeDopositBox/backup:/scripts.d/pre-backup
+      - /Users/s.vladimirov/Project/SafeDopositBox/backup:/scripts.d/post-backup
+    environment:
+      - DB_DUMP_TARGET=/db
+      - DB_PORT=3306
+      - DB_USER=root
+      - DB_PASS=MereHe@d1DBTest1
+      - DB_DUMP_FREQ=60
+      - DB_DUMP_BEGIN=2330
+      - DB_SERVER=sdb-mysql
+  db:
+    container_name: sdb-mysql
+    image: mysql
+    restart: always
+    command:  --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_DATABASE: 'safedepositbox'
+      MYSQL_USER: 'safedepositbox'
+      MYSQL_PASSWORD: 'MereHe@d1DBTest1'
+      MYSQL_ROOT_PASSWORD: 'MereHe@d1DBTest1'
+      MYSQL_ROOT_USER: 'root'
+      MYSQL_ROOT_HOST: '%'
+    ports:
+      - 3306:3306
+    expose:
+      - 3306
+    networks:
+      - webnet
+    volumes:
+      - my-db:/var/lib/mysql
+
+  server:
+    build: ./
+    container_name: sdb-server
+    command: npm run dev
+    restart: always
+    ports:
+      - 8080:80
+    expose:
+      - 3306
+    networks:
+      - webnet
+    depends_on:
+      - db
+networks:
+  webnet:
+
+# Names our volume
+volumes:
+  my-db:
+    driver: local
